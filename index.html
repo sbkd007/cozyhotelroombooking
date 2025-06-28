@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Haven Retreat | Luxury BNB Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C8A27A',
+                        secondary: '#3A3A3A',
+                        accent: '#8B5A2B',
+                        light: '#F8F4EF',
+                        dark: '#2D2D2D'
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1566073771259-6a93b368dde8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+        }
+        .room-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .testimonial-card {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        .booking-form {
+            background: linear-gradient(135deg, rgba(200, 162, 122, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
+            backdrop-filter: blur(10px);
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="font-body text-secondary bg-light">
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl mr-3">CH</div>
+                <h1 class="text-2xl font-heading font-bold">Cozy Haven<span class="text-primary">.</span></h1>
+            </div>
+            
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="hover:text-primary transition">Home</a></li>
+                    <li><a href="#rooms" class="hover:text-primary transition">Rooms</a></li>
+                    <li><a href="#about" class="hover:text-primary transition">About</a></li>
+                    <li><a href="#amenities" class="hover:text-primary transition">Amenities</a></li>
+                    <li><a href="#contact" class="hover:text-primary transition">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="flex items-center">
+                <button class="bg-primary text-white px-6 py-2 rounded-full hover:bg-accent transition">Book Now</button>
+                <button class="ml-4 md:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg bg-cover bg-center text-white pt-32 pb-24">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto">
+                <span class="text-primary font-semibold tracking-widest">LUXURY BED & BREAKFAST</span>
+                <h1 class="text-5xl md:text-7xl font-heading font-bold mt-4 mb-6">Experience Unforgettable Comfort</h1>
+                <p class="text-xl mb-10 max-w-2xl mx-auto">Nestled in the heart of nature, Cozy Haven Retreat offers a perfect blend of luxury, comfort, and authentic hospitality.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="bg-primary hover:bg-accent text-white px-8 py-4 rounded-full text-lg font-medium transition">Book Your Stay</button>
+                    <button class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-full text-lg font-medium transition">Explore Rooms</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80" alt="Living Area" class="rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1592229505726-cf1218fa0f6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Bedroom" class="rounded-lg shadow-lg mt-8">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-lg shadow-lg w-64">
+                        <h3 class="font-heading text-xl font-bold mb-2">10+ Years</h3>
+                        <p>Of Hospitality Excellence</p>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <span class="text-primary font-semibold">OUR STORY</span>
+                    <h2 class="text-4xl font-heading font-bold mt-2 mb-6">Welcome to Cozy Haven Retreat</h2>
+                    <p class="mb-6 text-lg">Established in 2013, Cozy Haven Retreat began as a passion project of the Henderson family. What started as a charming countryside cottage has transformed into an award-winning bed and breakfast known for its warm hospitality and attention to detail.</p>
+                    <p class="mb-8 text-lg">Our mission is to provide guests with an unforgettable experience that combines the comforts of home with the luxury of a boutique hotel. Every room is thoughtfully designed to create a serene atmosphere where you can truly unwind.</p>
+                    
+                    <div class="flex flex-wrap gap-8">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                                <i class="fas fa-mug-hot text-primary text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-lg">Homemade Breakfast</h3>
+                        </div>
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                                <i class="fas fa-spa text-primary text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-lg">Spa Services</h3>
+                        </div>
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                                <i class="fas fa-wifi text-primary text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-lg">Free Wi-Fi</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-semibold">ACCOMMODATION</span>
+                <h2 class="text-4xl font-heading font-bold mt-2 mb-6">Our Luxurious Rooms</h2>
+                <p>Each of our rooms is uniquely designed to provide the perfect blend of comfort, style, and functionality. Experience the charm of our thoughtfully curated spaces.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Room 1 -->
+                <div class="room-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Deluxe Room" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-heading font-bold">Deluxe Suite</h3>
+                            <span class="text-primary font-bold text-xl">$189<small class="text-base font-normal">/night</small></span>
+                        </div>
+                        <p class="mb-6">Spacious suite with king bed, sitting area, and panoramic views of the countryside.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">King Bed</span>
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Mountain View</span>
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Jacuzzi</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-accent text-white py-3 rounded-lg transition">Book Now</button>
+                    </div>
+                </div>
+                
+                <!-- Room 2 -->
+                <div class="room-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1592229506156-2c7d4fbd0e3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Garden View Room" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-heading font-bold">Garden View</h3>
+                            <span class="text-primary font-bold text-xl">$159<small class="text-base font-normal">/night</small></span>
+                        </div>
+                        <p class="mb-6">Charming room overlooking our private gardens with queen bed and cozy fireplace.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Queen Bed</span>
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Garden View</span>
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Fireplace</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-accent text-white py-3 rounded-lg transition">Book Now</button>
+                    </div>
+                </div>
+                
+                <!-- Room 3 -->
+                <div class="room-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Heritage Room" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-heading font-bold">Heritage Room</h3>
+                            <span class="text-primary font-bold text-xl">$219<small class="text-base font-normal">/night</small></span>
+                        </div>
+                        <p class="mb-6">Elegant historic room with antique furnishings, four-poster bed, and private balcony.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">King Bed</span>
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Balcony</span>
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Antique Decor</span>
+                        </div>
+                        <button class="w-full bg-primary hover:bg-accent text-white py-3 rounded-lg transition">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Section -->
+    <div class="parallax py-32" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6">Escape to Serenity</h2>
+            <p class="text-xl max-w-2xl mx-auto mb-8">Discover the perfect blend of luxury and nature at our countryside retreat</p>
+            <button class="bg-primary hover:bg-accent text-white px-8 py-4 rounded-full text-lg font-medium transition">Plan Your Getaway</button>
+        </div>
+    </div>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-semibold">EXPERIENCE</span>
+                <h2 class="text-4xl font-heading font-bold mt-2 mb-6">Premium Amenities</h2>
+                <p>We've thoughtfully curated every detail to ensure your stay is nothing short of exceptional.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-white rounded-xl shadow-md">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-utensils text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Gourmet Breakfast</h3>
+                    <p>Daily homemade breakfast featuring local ingredients and seasonal specialties.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-xl shadow-md">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-swimming-pool text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Heated Pool</h3>
+                    <p>Year-round heated outdoor pool surrounded by lush gardens and relaxation areas.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-xl shadow-md">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-spa text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Spa Services</h3>
+                    <p>Indulge in rejuvenating treatments from our onsite spa therapists.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-xl shadow-md">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bicycle text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Bicycle Rentals</h3>
+                    <p>Explore the countryside with our complimentary bicycle rental service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-primary/5">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-primary font-semibold">GUEST REVIEWS</span>
+                <h2 class="text-4xl font-heading font-bold mt-2 mb-6">What Our Guests Say</h2>
+                <p>Hear from travelers who have experienced the magic of Cozy Haven Retreat.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="italic">"The attention to detail at Cozy Haven is remarkable. From the luxurious linens to the homemade breakfast, every aspect exceeded our expectations. We'll definitely be back!"</p>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Michael Chen">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="italic">"The perfect romantic getaway! The Heritage Room was stunning with its antique charm and modern comforts. The staff went above and beyond to make our anniversary special."</p>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Rodriguez">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Emma Rodriguez</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="italic">"As a frequent traveler, I can confidently say this is one of the best B&Bs I've ever visited. The gardens are breathtaking, and the pool area is an oasis of tranquility."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="lg:w-1/2 p-12 booking-form">
+                        <h2 class="text-4xl font-heading font-bold mb-6">Book Your Stay</h2>
+                        <p class="mb-8 text-lg">Ready to experience the charm of Cozy Haven Retreat? Fill out the form and we'll get back to you within 24 hours to confirm your reservation.</p>
+                        
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block mb-2 font-medium">Check-in Date</label>
+                                    <input type="date" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                                <div>
+                                    <label class="block mb-2 font-medium">Check-out Date</label>
+                                    <input type="date" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block mb-2 font-medium">Adults</label>
+                                    <select class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block mb-2 font-medium">Children</label>
+                                    <select class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block mb-2 font-medium">Room Preference</label>
+                                <select class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <option>Deluxe Suite</option>
+                                    <option>Garden View</option>
+                                    <option>Heritage Room</option>
+                                    <option>No Preference</option>
+                                </select>
+                            </div>
+                            
+                            <button class="w-full bg-primary hover:bg-accent text-white py-4 rounded-lg text-lg font-medium transition">Check Availability</button>
+                        </form>
+                    </div>
+                    
+                    <div class="lg:w-1/2 bg-cover bg-center hidden lg:block" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl mr-3">CH</div>
+                        <h2 class="text-2xl font-heading font-bold">Cozy Haven<span class="text-primary">.</span></h2>
+                    </div>
+                    <p class="mb-6">A luxury bed and breakfast retreat offering unparalleled comfort in a serene countryside setting.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-heading font-bold mb-6">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 mr-4"></i>
+                            <span>123 Countryside Lane<br>Serenity Valley, SV 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-primary mr-4"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary mr-4"></i>
+                            <span>hello@cozyhaven.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-heading font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-primary transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Our Rooms</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Amenities</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Gallery</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-heading font-bold mb-6">Newsletter</h3>
+                    <p class="mb-4">Subscribe to receive exclusive offers and updates.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="p-3 rounded-l-lg w-full text-dark">
+                        <button class="bg-primary hover:bg-accent px-4 rounded-r-lg transition"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/10 text-center text-white/60">
+                <p>&copy; 2023 Cozy Haven Retreat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple animation for room cards on scroll
+        window.addEventListener('scroll', function() {
+            const roomCards = document.querySelectorAll('.room-card');
+            roomCards.forEach(card => {
+                const cardPosition = card.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                if(cardPosition < screenPosition) {
+                    card.style.opacity = 1;
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Initialize room cards with slight animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const roomCards = document.querySelectorAll('.room-card');
+            roomCards.forEach((card, index) => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                
+                // Stagger the animation
+                setTimeout(() => {
+                    card.style.opacity = 1;
+                    card.style.transform = 'translateY(0)';
+                }, 300 * index);
+            });
+        });
+    </script>
+</body>
+</html>
